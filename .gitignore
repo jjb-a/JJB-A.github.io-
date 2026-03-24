@@ -1,0 +1,44 @@
+#  dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+#  logs
+*.log
+logs/
+
+#  OS generated files
+.DS_Store
+Thumbs.db
+
+#  IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+#  environment variables
+.env
+.env.local
+.env.*.local
+
+#  build outputs (if you have a build step later)
+dist/
+build/
+
+#  images
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+
+#  temporary files
+chatbot-page.html
+chatbot.html
+index.html
+script.js
+style.css
