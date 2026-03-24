@@ -1,0 +1,1168 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'SimSun', serif;
+    background-color: #F5F5DC;
+    color: #3E2723;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23F5F5DC"/><path d="M0 0 L100 0 L100 100 L0 100 Z" fill="none" stroke="%23D2B48C" stroke-width="0.5" opacity="0.3"/></svg>');
+    line-height: 1.6;
+}
+
+/* 导航栏 */
+.navbar {
+    background-color: transparent !important;
+    color: #3E2723;
+    padding: 1rem 0;
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    box-shadow: none !important;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 1200px;
+    border: none !important;
+    outline: none !important;
+}
+
+.navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #F5F5DC;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 0 0 10px rgba(245,245,220,0.5);
+    margin-bottom: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: #F5F5DC;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 0 0 8px rgba(245,245,220,0.5);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #D4AF37;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 0 0 12px rgba(212,175,55,0.7);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #F5F5DC;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+/* 英雄区域 */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%238B4513"/><path d="M0 0 L100 0 L100 100 L0 100 Z" fill="none" stroke="%23A0522D" stroke-width="1" opacity="0.5"/></svg>');
+    color: #F5F5DC;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #8B4513;
+    color: #F5F5DC;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.btn:hover {
+    background-color: #A0522D;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* 通用章节样式 */
+.section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #8B4513;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #D4AF37;
+}
+
+/* 历史渊源 */
+.history-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.history-item {
+    background-color: rgba(255,255,255,0.8);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.history-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.history-item h3 {
+    color: #8B4513;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .history-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 工匠精神 */
+.craftsman-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.craftsman-item {
+    background-color: rgba(255,255,255,0.8);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.craftsman-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.craftsman-item h3 {
+    color: #8B4513;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* 作品展示 */
+.works-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .works-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.work-card {
+    perspective: 1000px;
+    height: 400px;
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.6s ease;
+}
+
+.card-front {
+    background-color: rgba(255,255,255,0.9);
+}
+
+.card-back {
+    background-color: #8B4513;
+    color: #F5F5DC;
+    transform: rotateY(180deg);
+}
+
+.work-card:hover .card-front,
+.work-card.flipped .card-front {
+    transform: rotateY(180deg);
+}
+
+.work-card:hover .card-back,
+.work-card.flipped .card-back {
+    transform: rotateY(0deg);
+}
+
+.card-image {
+    width: 200px;
+    height: 200px;
+    margin: 1rem 0;
+    border-radius: 4px;
+    background-color: #D2B48C;
+    background-size: cover;
+    background-position: center;
+    filter: sepia(0.3) grayscale(0.2) contrast(1.1);
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.2), 1px 1px 2px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 红园 - 古典园林砖雕 */
+.red-garden {
+    background-image: url('https://ts1.tc.mm.bing.net/th/id/OIP-C.LjTzNkHfU4Y1kx4Y0yxNJAHaEP?rs=1&pid=ImgDetMain&o=7&rm=3');
+}
+
+/* 东公馆 - 民国建筑砖雕 */
+.east-mansion {
+    background-image: url('https://www.zsbeike.com/imgs/I/I09355/i09355.0240.2[3f827964747a].jpg');
+}
+
+/* 八坊十三巷 - 街巷民居砖雕 */
+.eight-lanes {
+    background-image: url('https://ts2.tc.mm.bing.net/th/id/OIP-C.1rVa_Nl5w8GiXfr-6akBnwHaEv?rs=1&pid=ImgDetMain&o=7&rm=3');
+}
+
+/* 蝙蝠纹 - 经典吉祥纹样 */
+.bat-pattern {
+    background-image: url('https://ts1.tc.mm.bing.net/th/id/OIP-C.eHljH_S-b4rivnGFt2DA3AHaF4?rs=1&pid=ImgDetMain&o=7&rm=3');
+}
+
+/* 回纹 - 连续回旋的几何纹样 */
+.spiral-pattern {
+  background-image: url('./19148775_083031845859_2.jpg');
+}
+
+/* 鹿鹤同春 - 鹿与鹤的组合纹样 */
+.deer-crane {
+    background-image: url('https://n.sinaimg.cn/history/transform/20170930/lK9S-fymkwwk7234342.jpg');
+}
+
+/* 百子图 - 多个孩童嬉戏的场景 */
+.hundred-boys {
+    background-image: url('https://ts1.tc.mm.bing.net/th/id/OIP-C.IHhU90BksWjR5BLEo9MyWAHaEZ?rs=1&pid=ImgDetMain&o=7&rm=3');
+}
+
+/* 牡丹纹 - 经典吉祥纹样 */
+.peony-pattern {
+    background-image: url('boguweng.webp');
+}
+
+/* 博古纹 - 文人气息纹样 */
+.bogu-pattern {
+    background-image: url('mudanwen.webp');
+}
+
+/* 传承与创新 */
+.heritage-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.heritage-item {
+    background-color: rgba(255,255,255,0.8);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.heritage-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.heritage-item h3 {
+    color: #8B4513;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+/* 联系我们 */
+.contact-content {
+    background-color: rgba(255,255,255,0.8);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-content p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* 360°全景展厅 */
+.panorama {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.panorama.active {
+    display: flex;
+}
+
+.panorama-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.panorama-image {
+    width: 500%;
+    height: 100%;
+    background-image: url('https://p8.ssl.qhimg.com/t01b4b4b4b4b4b4b4b4.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+    filter: sepia(0.3) grayscale(0.2) contrast(1.1);
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.panorama-markers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+.marker:hover {
+    transform: scale(1.5);
+    box-shadow: 0 0 10px #FFD700;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0,0,0,0.5);
+    color: #F5F5DC;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* 标注信息弹窗 */
+.marker-info {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255,255,255,0.95);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    z-index: 2100;
+    display: none;
+    max-width: 400px;
+    width: 90%;
+}
+
+.marker-info.active {
+    display: block;
+}
+
+.marker-info h3 {
+    color: #8B4513;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.close-info {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #8B4513;
+    color: #F5F5DC;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-info:hover {
+    background-color: #A0522D;
+}
+
+/* 可互动砖雕小人 */
+.brick-doll {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 8vw;
+    max-width: 100px;
+    min-width: 60px;
+    aspect-ratio: 2/3;
+    cursor: pointer;
+    z-index: 9999;
+    transition: transform 0.5s ease;
+}
+
+/* 父容器 */
+.doll-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    filter: contrast(1.1);
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* 砖雕质感基础样式 */
+.doll-container * {
+    background-color: #A9A9A9;
+    box-shadow: inset 3px 3px 5px rgba(0,0,0,0.3), inset -3px -3px 5px rgba(255,255,255,0.1);
+    position: absolute;
+    z-index: 1;
+}
+
+/* 头部 */
+.doll-head {
+    width: 50%;
+    height: 33.33%;
+    border-radius: 50%;
+    top: 6.67%;
+    left: 25%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><path d="M15 20 L35 20 M20 25 L30 25 M22 30 L28 30" stroke="%238B4513" stroke-width="1" opacity="0.5"/></svg>');
+    background-size: cover;
+}
+
+.doll-face {
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+    border-radius: 50%;
+    box-shadow: none;
+    background: none;
+}
+
+.doll-hat {
+    width: 80%;
+    height: 30%;
+    top: -10%;
+    left: 10%;
+    border-radius: 20px 20px 0 0;
+}
+
+/* 身体 */
+.doll-body {
+    width: 60%;
+    height: 46.67%;
+    top: 40%;
+    left: 20%;
+    border-radius: 30px 30px 0 0;
+}
+
+.doll-clothes {
+    width: 66.67%;
+    height: 57.14%;
+    top: 14.29%;
+    left: 16.67%;
+    border-radius: 20px 20px 0 0;
+    box-shadow: none;
+    background: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path d="M10 15 L30 15 M20 15 L20 35" stroke="%238B4513" stroke-width="1" opacity="0.5"/></svg>');
+    background-size: cover;
+}
+
+/* 手臂 */
+.doll-arm {
+    width: 15%;
+    height: 26.67%;
+    top: 46.67%;
+    border-radius: 10px;
+}
+
+.doll-arm.left {
+    left: 15%;
+    transform-origin: bottom center;
+}
+
+.doll-arm.right {
+    right: 15%;
+    transform-origin: bottom center;
+}
+
+/* 刻刀 */
+.doll-knife {
+    width: 53.33%;
+    height: 50%;
+    top: -25%;
+    left: 23.33%;
+    border-radius: 4px;
+    background-color: #8B4513;
+    box-shadow: none;
+}
+
+/* 腿部 */
+.doll-legs {
+    width: 40%;
+    height: 13.33%;
+    top: 86.67%;
+    left: 30%;
+    border-radius: 0 0 20px 20px;
+}
+
+/* 动画效果 */
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(30deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(30deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes nod {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes sway {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.brick-doll:hover {
+    animation: sway 2s ease-in-out infinite;
+}
+
+.brick-doll:hover .doll-arm.right {
+    animation: wave 2s ease-in-out infinite;
+}
+
+.brick-doll:hover .doll-head {
+    animation: nod 2s ease-in-out infinite;
+}
+
+.brick-doll:active {
+    transform: scale(0.95);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .brick-doll {
+        width: 80px;
+        height: 120px;
+    }
+    
+    .doll-head {
+        width: 40px;
+        height: 40px;
+        left: 20px;
+    }
+    
+    .doll-body {
+        width: 50px;
+        height: 60px;
+        left: 15px;
+    }
+    
+    .doll-arm {
+        width: 12px;
+        height: 35px;
+    }
+    
+    .doll-legs {
+        width: 30px;
+        height: 15px;
+        left: 25px;
+    }
+}
+
+/* 砖雕小知识弹窗 */
+.knowledge-popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    transform: none;
+    background-color: rgba(255,255,255,0.95);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    z-index: 1100;
+    display: none;
+    max-width: 400px;
+    width: 90%;
+}
+
+.knowledge-popup.active {
+    display: block;
+}
+
+.knowledge-popup h3 {
+    color: #8B4513;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.close-knowledge {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #8B4513;
+    color: #F5F5DC;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-knowledge:hover {
+    background-color: #A0522D;
+}
+
+/* 引导弹窗 */
+.guide-popup {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    transform: none;
+    background-color: rgba(255,255,255,0.95);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    z-index: 1100;
+    display: none;
+    max-width: 400px;
+    width: 90%;
+}
+
+.guide-popup.active {
+    display: block;
+}
+
+.guide-popup h3 {
+    color: #8B4513;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.close-guide {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #8B4513;
+    color: #F5F5DC;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-guide:hover {
+    background-color: #A0522D;
+}
+
+/* 回到顶部按钮 */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #8B4513;
+    color: #F5F5DC;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 900;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.back-to-top.active {
+    display: flex;
+}
+
+.back-to-top:hover {
+    background-color: #A0522D;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* 图片放大模态框 */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+#modal-image {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-modal:hover {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: #3E2723;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .section {
+        padding: 4rem 1rem;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .brick-doll {
+        width: 60px;
+        height: 90px;
+    }
+
+    .doll-body {
+        width: 45px;
+        height: 60px;
+    }
+
+    .doll-arm {
+        width: 10px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .work-card {
+        height: 350px;
+    }
+
+    .card-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+/* 强制去掉小人所有边框和多余样式 */
+.character-wrapper, 
+.character-wrapper * {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+/* 顶部导航强制上下居中排列 */
+header, .header, .navbar {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+/* 主标题：增大和下方导航的间距，数字越大间距越大 */
+header h1, .site-title, .logo {
+  margin-bottom: 20px !important;
+  margin-top: 0 !important;
+}
+
+/* 导航菜单强制居中 */
+nav, .nav, .nav-menu {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+/* 历史渊源卡片整齐排版 */
+.cards-wrapper, .history-container {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-between !important;
+  align-items: stretch !important;
+  gap: 30px !important; /* 卡片之间的间距，数字越大间距越大 */
+}
+
+.history-container .card, .cards-wrapper .card {
+  width: 31% !important; /* 每行刚好放3个，留足间距 */
+  box-sizing: border-box !important;
+  margin: 0 !important;
+}
+
+/* 手机端适配，自动改成每行1个，不会挤在一起 */
+@media (max-width: 768px) {
+  .history-container .card, .cards-wrapper .card {
+    width: 100% !important;
+  }
+}
+/* 导航栏放大优化 */
+/* 1. 增大导航栏整体高度 */
+header, .header, .navbar {
+  padding-top: 25px !important; /* 调大这个数字，导航栏顶部高度更高 */
+  padding-bottom: 25px !important; /* 调大这个数字，导航栏底部高度更高 */
+}
+
+/* 2. 放大导航菜单字体 */
+nav a, .nav-item, .menu-item {
+  font-size: 20px !important; /* 调大这个数字，导航字更大，默认一般是16px */
+  margin: 0 15px !important; /* 调大这个数字，导航选项之间的间距更大 */
+}
+
+/* 3. 放大主标题「临夏砖雕」的字体（可选） */
+header h1, .site-title, .logo {
+  font-size: 36px !important; /* 调大这个数字，主标题更大 */
+}
+
+/* 手机端适配，不会挤在一起 */
+@media (max-width: 768px) {
+  nav a, .nav-item, .menu-item {
+    font-size: 16px !important;
+    margin: 0 8px !important;
+  }
+  header h1, .site-title, .logo {
+    font-size: 28px !important;
+  }
+}
+/* 临夏砖雕牡丹纹样正文背景 */
+body {
+  background-image: url("bg-pattern.png");
+  background-repeat: repeat;       /* 让图案平铺铺满整个页面 */
+  background-size: 600px;          /* 控制图案大小，数字越小图案越密，越大越疏 */
+  background-color: #f8f5e6;       /* 暖米色底色，和砖雕风格更搭 */
+  background-attachment: fixed;    /* 让背景固定，滚动页面时图案不动 */
+}
+
+/* 给内容区域加半透明白色遮罩，保证文字清晰可读 */
+.container, section, .content {
+  background-color: rgba(255, 255, 255, 0.9); /* 0.9 是透明度，越接近1越不透明 */
+  padding: 25px;
+  border-radius: 12px;
+  margin: 20px auto;
+}
+/* 临夏砖雕牡丹纹样——整页背景（单张铺满） */
+body {
+  background-image: url("bg-pattern.png");
+  background-repeat: no-repeat;    /* 不重复，只用一张图 */
+  background-size: cover;          /* 自动缩放，铺满整个浏览器窗口 */
+  background-position: center;      /* 图片居中显示 */
+  background-attachment: fixed;    /* 滚动页面时背景固定不动 */
+  background-color: #f8f5e6;       /* 暖米色底色，和纹样风格匹配 */
+}
+
+/* 内容区域半透明白色，保证文字清晰 */
+.container, section, .content {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 20px auto;
+}
+
+/* 给内容区域加半透明白色遮罩，保证文字清晰可读 */
+.container, section, .content {
+  background-color: rgba(255, 255, 255, 0.9); /* 0.9 是透明度，越接近1越不透明 */
+  padding: 25px;
+  border-radius: 12px;
+  margin: 20px auto;
+}
+/* 把内容区域白色背景完全透明化 */
+.container, section, .content, .card-container {
+  background-color: transparent !important;
+  /* 保留原有的内边距和圆角，不破坏布局 */
+  padding: 25px;
+  border-radius: 12px;
+  margin: 20px auto;
+}
+
+/* 让卡片也变成半透明，避免文字被背景淹没 */
+.card {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+/* 朗读中的文字高亮样式 */
+[data-speech-id].speaking {
+  background-color: rgba(255, 215, 0, 0.3) !important; /* 半透金色 */
+  border-left: 4px solid #d4af37;
+  transition: all 0.3s ease;
+}
+/* 朗读时高亮当前文字 */
+.highlight {
+  background-color: #fff399 !important;
+  padding: 4px 8px;
+  border-radius: 4px;
+  /* 移除过渡动画，确保高亮立即显示 */
+}
+/* 一整张砖雕背景图撑满页面 */
+body {
+  margin: 0;
+  padding: 0;
+  /* 用你选中的那张砖雕纹样图 */
+  background-image: url("a.jpg");
+  /* 让图片自动缩放，撑满整个浏览器窗口 */
+  background-size: cover;
+  /* 不重复，只显示一整张图 */
+  background-repeat: no-repeat;
+  /* 背景固定在窗口，不随页面滚动 */
+  background-attachment: fixed;
+  /* 让纹样居中显示 */
+  background-position: center;
+  /* 复古暖底色，和纹样更协调 */
+  background-color: #f0e6d6;
+  /* 降低透明度，保证文字清晰 */
+  opacity: 0.85;
+}
+
+/* 内容区域半透明白底，避免文字被背景挡住 */
+.container, .content, section {
+  background-color: rgba(255, 253, 245, 0.92);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 导航栏保持完全透明 */
+.navbar {
+  background-color: transparent !important;
+  padding: 1rem 0;
+  box-shadow: none !important;
+}
+/* 精准匹配你所有的卡片，自动加流金边框，100%不遮挡内容 */
+/* 选中所有带标题和图片的卡片容器，绝对不会误选内部的图片/文字 */
+/* 排除首页和联系我们部分 */
+div:has(> p, > img, > h3, > .card-image):not(.hero-content):not(.contact-content) {
+  /* 边框粗细，3px清晰可见，想要更粗改成4px，更细改成2px */
+  border: 3px solid transparent !important;
+  /* 圆角和你的卡片完全贴合，可按需修改 */
+  border-radius: 12px !important;
+  /* 核心：内部完全透明，透过去你原本的卡片背景/图片/文字，仅边框是流金渐变 */
+  background: 
+    linear-gradient(transparent, transparent) padding-box,
+    linear-gradient(45deg, #d4af37, #f4e4bc, #b8860b, #daa520, #d4af37, #f4e4bc) border-box !important;
+  background-size: 300% 300% !important;
+  /* 流动动画，6s是速度，改4s更快，8s更慢 */
+  animation: goldFlow 6s ease-in-out infinite !important;
+  /* 金色发光，让边框更明显，不想要可以删掉这行 */
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.5) !important;
+  /* 完全不影响内部的内容 */
+  overflow: visible !important;
+}
+
+/* 流金流动动画，不能删除 */
+@keyframes goldFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 25%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 75%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

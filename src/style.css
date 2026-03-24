@@ -1,0 +1,79 @@
+/* 全局样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'SimSun', serif;
+  line-height: 1.6;
+  color: #3E2723;
+}
+
+/* 确保页面充满视口 */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* 移除默认的列表样式 */
+ul, ol {
+  list-style: none;
+}
+
+/* 移除默认的链接样式 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 确保图片响应式 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 确保按钮样式一致 */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* 确保表单元素样式一致 */
+input, textarea, select {
+  font-family: inherit;
+}
+
+/* 确保页面滚动平滑 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 一整张砖雕背景图撑满页面 */
+body {
+  margin: 0;
+  padding: 0;
+  /* 用你选中的那张砖雕纹样图 */
+  background-image: url("a.jpg");
+  /* 让图片自动缩放，撑满整个浏览器窗口 */
+  background-size: cover;
+  /* 不重复，只显示一整张图 */
+  background-repeat: no-repeat;
+  /* 背景固定在窗口，不随页面滚动 */
+  background-attachment: fixed;
+  /* 让纹样居中显示 */
+  background-position: center;
+  /* 复古暖底色，和纹样更协调 */
+  background-color: #f0e6d6;
+  /* 降低透明度，保证文字清晰 */
+  opacity: 0.85;
+}
+
+/* 内容区域半透明白底，避免文字被背景挡住 */
+.container, .content, section, .navbar {
+  background-color: rgba(255, 253, 245, 0.92);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
